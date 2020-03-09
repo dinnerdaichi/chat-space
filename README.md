@@ -27,11 +27,10 @@ Things you may want to cover:
 ##usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|name|string|null: false, foreign_key: true|
-|mail|string|null: false, foreign_key: true|
-|password|string|null: false, foreign_key: true|
-|massages|string|null: false, foreign_key: true|
+|name|string|null: false|
+|mail|string|null: false|
+|password|string|null: false|
+
 
 
 ## Association
@@ -43,9 +42,8 @@ Things you may want to cover:
 ##groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-|messages|integer|null: false, foreign_key: true|
+|name|string|null: false, foreign_key: true|
+
 
 
 ## Association
@@ -58,7 +56,8 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |body|text|null: false, foreign_key: true|
-|image|string|null: false, foreign_key: true|
+|image|text|
+|text|text|
 |group_id|integer|null: false, foreign_key: true|
 |users_id|integer|null: false, foreign_key: true|
 
@@ -72,8 +71,9 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user|references|null: false, foreign_key: true|
-|group|references|null: false, foreign_key: true|
+
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 
 ### Association

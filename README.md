@@ -31,23 +31,26 @@ Things you may want to cover:
 |name|string|null: false, foreign_key: true|
 |mail|string|null: false, foreign_key: true|
 |password|string|null: false, foreign_key: true|
+|massages|string|null: false, foreign_key: true|
 
 
 ## Association
-- has_many:groups
+- has_many:groups_users
+- has_many:groups, through: :groups_users
 - has_many:messages
-- belong_to:groups_users
 
 
 ##groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |group_id|integer|null: false, foreign_key: true|
-|user_id|string|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
+|messages|integer|null: false, foreign_key: true|
 
 
 ## Association
-- has_many:users
+- has_many:groups_users
+- has_many:users through: :groups_users
 - has_many:messages
 
 
@@ -61,6 +64,7 @@ Things you may want to cover:
 
 ## Association
 - belong_to:user
+- has_many:groups
 
 
 
@@ -68,11 +72,10 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 
 ### Association
 - belongs_to :group
 - belongs_to :user
-- has_many:massages

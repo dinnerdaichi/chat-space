@@ -63,7 +63,7 @@ Things you may want to cover:
 
 ## Association
 - belong_to:user
-- has_many:groups
+- belong_to:group
 
 
 

@@ -57,7 +57,6 @@ Things you may want to cover:
 |------|----|-------|
 |body|text|
 |image|text|
-|text|text|
 |group|references|null: false, foreign_key: true|
 |users|references|null: false, foreign_key: true|
 

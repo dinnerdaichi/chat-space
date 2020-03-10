@@ -27,7 +27,7 @@ Things you may want to cover:
 ##usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false|index:true|
 |mail|string|null: false|
 |password|string|null: false|
 
@@ -42,7 +42,7 @@ Things you may want to cover:
 ##groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false, foreign_key: true|
+|name|string|null: false|
 
 
 
@@ -55,11 +55,11 @@ Things you may want to cover:
 ##messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false, foreign_key: true|
+|body|text|
 |image|text|
 |text|text|
-|group_id|integer|null: false, foreign_key: true|
-|users_id|integer|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
+|users|references|null: false, foreign_key: true|
 
 ## Association
 - belong_to:user
@@ -72,8 +72,8 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|group|references|null: false, foreign_key: true|
 
 
 ### Association

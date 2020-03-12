@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.side-bar__UserNamebox{
+    height: 100px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    background-color: #253141;
+    width: 300px;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.side-bar__GroupBox{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+}
+
+.group {
+    color: white;
+    font-weight: bold;
+    height: 65px;
+    padding: 20px 20px 40px;
+    font-size: 15px;
+}
+.massage{
+    margin-top: 5px;
+    font-size: 11px;
+}
+
+/* メイントップ部分*/
+
+.main-chat {
+    width: calc(100% - 300px);
+}
+.main-chat__top{
+    background-color: white;
+    height: 100px;
+    padding: 0 40px;
+}
+.groupBox{
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.groupname{
+    font-size: 20px;
+    margin-top: 35px;    
+
+}
+
+.edit-btn{
+    color:#38aef0;
+    border: 1px solid #38aef0;
+    width: 72px;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    margin-top: 28px;
+    padding-top:10px;
+    padding-bottom: 10px;
+}
+
+.MenberName {
+    display: block;
+    color: gray;
+    font-size: 12px;
+}
+
+.edit-btn{
+    display: inline;
+}
+
+
+/* チャット部分*/
+
+
+.main-chat__middle{
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    padding: 35px 0 46px 40px;
+}
+
+.massage-box{
+    margin-bottom: 15px;
+}
+.username{
+    display: flex;
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 12px;
+}
+
+.time{  
+    color: #999999;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.chatmassage{
+    color: #434a54;
+    font-size: 14px;
+}
+
+.main-chat__bottom{
+    background-color: #d2d2d2;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.type-box{
+    height:50px;
+    background-color: white;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 85%;    
+    padding: 0 10px;
+    margin-right: 15px;
+}
+
+.sendbox{
+    background-color: #38aef0;
+    height: 50px;
+    width: 15%;
+    text-align: center;
+    line-height: 50px;
+}
+
+input{
+    display: none;
+}

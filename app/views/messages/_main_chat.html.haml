@@ -1,27 +1,27 @@
 .main-chat
   .main-chat__top
     .group-box
-      .groupname 新グループ
+      .group-box__group-name 新グループ
       = link_to "Edit", "#", class:"edit-btn" 
-    .group-box__menber-name Menber:daichi  
+    .group-box__member-name Member:daichi  
 
   .main-chat__middle
-    .massage-box
+    .message-box
       .username 
         daichi
         .time 2020/03/11
-      .chatmassage おはよう
+      .chatmessage おはよう
 
-    .massage-box
+    .message-box
       .username 
         daichi
         .time 2020/03/11
-      .chatmassage おはよう
+      .chatmessage おはよう
 
 
   .main-chat__bottom
     .type-box
-      typemassage
+      typemessage
       %label{class: "input-box__image"}
         = icon('fas', 'image')
         %input{type: "file"}

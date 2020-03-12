@@ -1,9 +1,9 @@
 .main-chat
   .main-chat__top
-    .groupBox
+    .group-box
       .groupname 新グループ
       = link_to "Edit", "#", class:"edit-btn" 
-    .MenberName Menber:daichi  
+    .group-box__menber-name Menber:daichi  
 
   .main-chat__middle
     .massage-box
@@ -25,4 +25,4 @@
       %label{class: "input-box__image"}
         = icon('fas', 'image')
         %input{type: "file"}
-    .send-box Send
+    .type-box__send-box Send

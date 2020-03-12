@@ -46,7 +46,7 @@
     height: 100px;
     padding: 0 40px;
 }
-.groupBox{
+.group-box{
     display: flex;
     justify-content: space-between;
     
@@ -70,7 +70,7 @@
     padding-bottom: 10px;
 }
 
-.MenberName {
+.group-box__menber-name {
     display: block;
     color: gray;
     font-size: 12px;
@@ -129,7 +129,7 @@
     margin-right: 15px;
 }
 
-.sendbox{
+.type-box__send-box{
     background-color: #38aef0;
     height: 50px;
     width: 15%;

@@ -2,14 +2,17 @@
   .side-bar__username-box
     = current_user.name
     .icon
-    = link_to do
+    = link_to new_group_path(current_user) do
       = icon('fa','edit') 
     = link_to edit_user_path(current_user) do
       = icon('fa','cog') 
   .side-bar__GroupBox
-    .group
-      新グループ
-      %p.massage まだメッセージはありません
-    .group
-      新グループ2
-      %p.massage まだメッセージはありません 
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .message 
+            = group.name
+          .group__message
+            メッセージはまだありません
+
+          

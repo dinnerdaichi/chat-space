@@ -1,28 +1,24 @@
 .main-chat
   .main-chat__top
     .group-box
-      .group-box__group-name 新グループ
-      = link_to "Edit", "#", class:"edit-btn" 
-    .group-box__member-name Member:daichi  
-
+      .group-box__group-name 
+        = @group.name
+      .group-box__member-name 
+        - @group.users.each do |user|
+          = user.name
+    .group-edit
+      = link_to 'edit',edit_group_path(@group),class: 'edit-btn' 
   .main-chat__middle
-    .message-box
-      .username 
-        daichi
-        .time 2020/03/11
-      .chatmessage おはよう
-
-    .message-box
-      .username 
-        daichi
-        .time 2020/03/11
-      .chatmessage おはよう
+    = render @messages
 
 
   .main-chat__bottom
-    .type-box
-      typemessage
-      %label{class: "input-box__image"}
-        = icon('fas', 'image')
-        %input{type: "file"}
-    .type-box__send-box Send
+    = form_for [@group, @message] do |f|
+      .main-chat__bottom__inputbox
+        = f.text_field :content, class: 'type-box', placeholder: 'type a message'
+        .input-box
+          = f.label :image, class: 'input-box__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, style: "display:none"
+        = f.submit 'Send', class: 'type-box__send-box'
+

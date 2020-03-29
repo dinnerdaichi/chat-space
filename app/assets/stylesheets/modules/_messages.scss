@@ -54,6 +54,8 @@
         background-color: white;
         height: 100px;
         padding: 0 40px;
+        display: flex;
+        justify-content: space-between;
     }
     
     &__middle{
@@ -72,21 +74,19 @@
 }
 
 .group-box{
-    display: flex;
-    justify-content: space-between;
-    
-    &__member-name {
-        display: block;
-        color: gray;
-        font-size: 12px;
-    }
+  width: 100%;
 
+  &__member-name {
+    display: block;
+    color: gray;
+    font-size: 12px;
+  }
+  
 }
 
 .group-box__group-name{
-    font-size: 20px;
-    margin-top: 35px;    
-
+  font-size: 20px;   
+  width: 80%;
 }
 
 .edit-btn{
@@ -135,9 +135,9 @@
 .type-box{
     height:50px;
     background-color: white;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+    // display: flex;
+    // justify-content:space-between;
+    // align-items: center;
     width: 85%;    
     padding: 0 10px;
     margin-right: 15px;
@@ -154,3 +154,15 @@
     }
 }
 
+.new_message{
+  width: 100%;
+}
+.main-chat__bottom{
+  width:100%;
+}
+.main-chat__bottom__inputbox{
+  
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}

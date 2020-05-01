@@ -5,7 +5,7 @@
         = @group.name
       .group-box__member-name 
         - @group.users.each do |user|
-          = user.name
+          Member : #{user.name}
     .group-edit
       = link_to 'Edit',edit_group_path(@group),class: 'edit-btn' 
   .main-chat__middle

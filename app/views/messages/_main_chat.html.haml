@@ -4,8 +4,9 @@
       .group-box__group-name 
         = @group.name
       .group-box__member-name 
+        Member :  
         - @group.users.each do |user|
-          Member : #{user.name}
+          #{user.name} 
     .group-edit
       = link_to 'Edit',edit_group_path(@group),class: 'edit-btn' 
   .main-chat__middle
